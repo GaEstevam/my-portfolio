@@ -1,0 +1,72 @@
+header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 6vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 2px;
+    margin-left: 10px;
+
+  }
+  
+  ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 50px; 
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  
+  ul li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Fira Code', monospace; 
+    font-size: 1.2rem;
+    padding: 0 20px;
+    color: #ccd6f6; 
+    border-left: 1px solid #0b1828; 
+    border-right: 1px solid #0b1828; 
+  }
+  
+  ul li:hover {
+    color: #fca311; 
+    cursor: pointer;
+    border-bottom: 2px solid #fca311; 
+  }
+  
+  .language-selector {
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  label {
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  select {
+    background-color: #0d0d0d;
+    color: #959595;
+    border: none;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+  }
+  
+  select:focus {
+    outline: none;
+    color: #ffffff;
+  }
+  

@@ -1,0 +1,34 @@
+h1, h2 {
+    margin: 0;
+    color: #cdd6f4;
+  }
+  
+  h2 {
+    font-size: 60px;
+
+  }
+  
+  p {
+    color: #cdd6f4;
+  }
+
+  a {
+    text-decoration: none;
+    color: #cdd6f4;
+  }
+
+  .function {
+    color: #4440cc;
+  }
+
+  .comment {
+    color: #b1b1b1;
+  }
+
+  .link {
+    color: #5fa054;
+  }
+
+  .text {
+    color: #e39f5a;
+  }

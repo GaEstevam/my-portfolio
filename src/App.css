@@ -1,38 +1,71 @@
+/* Reset básico */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Fira Code', monospace;
+  background: linear-gradient(145deg, #0d1b2a, #1e2a38);
+}
+
+/* App container */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 90vh;
+  width: 90vw;
+}
+
+/* Dividindo o conteúdo entre Main e Game */
+.content {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  flex: 1;
+  padding: 0 50px;
+}
+
+/* Estilo do Main (lado esquerdo) */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  text-align: left;
+  height: 100%;
+}
+
+/* Estilo do Game (lado direito) */
+.game {
+  background-color: #1e2a38;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 400px;
+}
+
+/* Estilo do conteúdo do jogo */
+.game-screen {
+  background-color: #0d1b2a;
+  border-radius: 10px;
+  height: 200px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #d08770;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

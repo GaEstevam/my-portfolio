@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Home from './pages/Home';
+import AboutMe from './pages/AboutMe';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
-function App() {
+const App: React.FC = () => {
+  const [language, setLanguage] = useState('pt'); // Padrão: português
+
+  // Função para mudar o idioma
+  const changeLanguage = (newLanguage: string) => {
+    setLanguage(newLanguage);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header language={language} changeLanguage={changeLanguage} />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home language={language} />} />
+            <Route path="/about" element={<AboutMe language={language} />} />
+            <Route path="/projects" element={<Projects language={language} />} />
+            <Route path="/contact" element={<Contact language={language} />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
