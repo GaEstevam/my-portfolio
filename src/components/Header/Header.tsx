@@ -3,28 +3,42 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 interface HeaderProps {
-  language: string;
-  changeLanguage: (newLanguage: string) => void;
+  language: 'pt' | 'en'; // Garantir que o tipo de language seja apenas 'pt' ou 'en'
+  changeLanguage: (newLanguage: 'pt' | 'en') => void; // Ajustar a função changeLanguage para aceitar apenas 'pt' ou 'en'
 }
 
 const Header: React.FC<HeaderProps> = ({ language, changeLanguage }) => {
+  // Função auxiliar para lidar com a mudança de idioma
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLanguage = e.target.value as 'pt' | 'en'; // Converter o valor do select para 'pt' ou 'en'
+    changeLanguage(newLanguage);
+  };
+
   return (
     <header>
       <nav>
+        <p>gabriel-estevam</p>
         <ul>
-          <p>gabriel-estevam</p>
-          <li>
-            <Link to="/">{language === 'pt' ? '_olá' : '_hello'}</Link>
-          </li>
-          <li>
-            <Link to="/about">{language === 'pt' ? '_sobre-mim' : '_about-me'}</Link>
-          </li>
-          <li>
-            <Link to="/projects">{language === 'pt' ? '_projetos' : '_projects'}</Link>
-          </li>
-          <li>
-            <Link to="/contact">{language === 'pt' ? '_contato' : '_contact-me'}</Link>
-          </li>
+          <Link to="/home" className='link'>
+            <li>
+              {language === 'pt' ? '_olá' : '_hello'}
+            </li>
+          </Link>
+          <Link to="/about" className='link'>
+            <li>
+              {language === 'pt' ? '_sobre-mim' : '_about-me'}
+            </li>
+          </Link>
+          <Link to="/projects" className='link'>
+            <li>
+              {language === 'pt' ? '_projetos' : '_projects'}
+            </li>
+          </Link>
+          <Link to="/contact" className='link'>
+            <li>
+              {language === 'pt' ? '_contato' : '_contact-me'}
+            </li>
+          </Link>
         </ul>
       </nav>
       <div className="language-selector">
@@ -32,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ language, changeLanguage }) => {
         <select
           id="language"
           value={language}
-          onChange={(e) => changeLanguage(e.target.value)}
+          onChange={handleLanguageChange} // Usar a função auxiliar
         >
           <option value="pt">Português</option>
           <option value="en">English</option>

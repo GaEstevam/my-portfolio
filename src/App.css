@@ -12,60 +12,14 @@ html, body {
 .App {
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  width: 90vw;
+  height: 95vh;
+  width: 100vw;
 }
 
-/* Dividindo o conteúdo entre Main e Game */
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  padding: 0 50px;
-}
-
-/* Estilo do Main (lado esquerdo) */
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  height: 100%;
-}
-
-/* Estilo do Game (lado direito) */
-.game {
-  background-color: #1e2a38;
-  border-radius: 15px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 350px;
-  height: 400px;
-}
-
-/* Estilo do conteúdo do jogo */
-.game-screen {
-  background-color: #0d1b2a;
-  border-radius: 10px;
-  height: 200px;
-  width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-button {
-  background-color: #d08770;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 0;
 }
