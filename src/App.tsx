@@ -29,7 +29,7 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact language={language} />} />
           </Routes>
         </div>
-        <Footer language={language} />
+          <Footer language={language} />
       </div>
     </Router>
   );

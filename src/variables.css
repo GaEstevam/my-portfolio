@@ -1,0 +1,36 @@
+:root {
+  
+    /* Paleta de Cores */
+    --primary-color: #2db1ce; 
+    --primary-color-comment: #15ac25; 
+    --primary-color-const: #2169ac; 
+    --primary-color-main-text: #e39f5a; 
+  
+    /* Cores de Texto */
+    --text-color-primary: #ffffff; 
+    --text-color-secondary: #c9d1d9; 
+    --text-header-color-hover: #7f848e; 
+    --text-color-title: #0080ff; 
+  
+    /* Cores de Fundo */
+    --background-color: #1e1e1e; 
+    --background-light: #2d2d2d; 
+    --background-darker: #121212;
+    
+    /* Cores botões */
+    --button-primary-color: #e69823;
+    --button-primary-hover: #cb8721; 
+    --button-secondary-color: #26a52a;
+    --button-secondary-hover: #1e8b24;
+    --button-backup-color: #ff0000; 
+  
+    /* Cores para Alertas */
+    --error-color: #f44336; 
+    --success-color: #4caf50; 
+    --warning-color: #ff9800; 
+    
+    /* Outros */
+    --border-color: #282A36; 
+  }
+  
+  

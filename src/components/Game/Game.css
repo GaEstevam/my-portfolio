@@ -29,7 +29,7 @@
 }
 
 .food {
-  background-color: #d08770;
+  background-color: var(--button-primary-color);
 }
 
 .game-over, .victory-screen {
@@ -38,11 +38,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #cdd6f4;
+  color: var(--text-color-secondary);
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .game-over p, .victory-screen {
@@ -50,7 +51,7 @@
 }
 
 .restart-btn {
-  background-color: #d08770;
+  background-color: var(--button-primary-color);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -65,13 +66,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #d08770;
+  background-color: var(--button-primary-color);
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
+}
+
+.start-game-btn:hover {
+  background-color: var(--button-primary-hover);
 }
 
 .game-sidebar {
@@ -83,7 +88,7 @@
   width: 150px;
   height: 400px;
   padding: 0px 50px;
-  color: #cdd6f4;
+  color: var(--text-color-secondary);
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -138,7 +143,7 @@
 }
 
 .skip-btn {
-  background-color: #d08770;
+  background-color: var(--button-primary-color);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -148,4 +153,8 @@
   bottom: 20px;
   right: 20px;
   font-size: 16px;
+}
+
+.skip-btn:hover {
+  background-color: var(--button-primary-hover);
 }

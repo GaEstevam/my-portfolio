@@ -109,7 +109,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ language }) => {
 
   return (
     <div className="content-aboutMe">
-      <div className="sidebar">
+      <div className="sidebar-aboutme">
         <div className="personal-info">
           <h2>{language === 'pt' ? 'Informações Pessoais' : 'Personal Info'}</h2>
           <ul className='personal-info-list'>

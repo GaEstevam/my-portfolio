@@ -1,0 +1,99 @@
+@import url('../../variables.css');
+ 
+  .projects-container {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .sidebar {
+    width: 16rem;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: var(--text-color-secondary);
+  }
+  
+  .sidebar-item input {
+    margin-right: 10px;
+  }
+  
+  .sidebar-item .icon {
+    margin-right: 10px;
+  }
+  
+  .projects-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    overflow: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  .project-card {
+    background-color: #0d1b2a;
+    border-radius: 10px;
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .project-header h3 {
+    margin: 0;
+    color: var(--text-color-title);
+  }
+  
+  .project-header span {
+    color: #7f848e;
+  }
+  
+  .icon-container {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+  }
+  
+  .view-project {
+    background-color: var(--button-secondary-color);
+    color: var(--text-color-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block; 
+  }
+  
+  .view-project:hover {
+    background-color: var(--button-secondary-hover);
+  }
+  
+  

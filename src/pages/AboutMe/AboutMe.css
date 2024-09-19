@@ -1,10 +1,4 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
+@import url('../../variables.css');
 
 .content-aboutMe {
   display: flex;
@@ -12,9 +6,9 @@ body, html {
   width: 100vw;
 }
 
-.sidebar {
+.sidebar-aboutme {
   width: 16rem;
-  border-right: 1px solid #282A36;
+  border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,22 +16,22 @@ body, html {
   box-sizing: border-box;
 }
 
-.sidebar h2 {
-  color: #F8F8F2;
+.sidebar-aboutme h2 {
+  color: var(--text-color-primary);
   font-size: 14px;
   text-transform: uppercase;
   padding: 5px;
-  border-bottom: 1px solid #282A36;
+  border-bottom: 1px solid var(--border-color);
   text-align: center;
 }
 
 .contacts h2 {
-  color: #F8F8F2;
+  color: var(--text-color-primary);
   font-size: 14px;
   text-transform: uppercase;
   padding: 5px;
-  border-top: 1px solid #282A36;
-  border-bottom: 1px solid #282A36;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   text-align: center;
 }
 
@@ -57,11 +51,11 @@ body, html {
 }
 
 .personal-info-list li {
+  height: 100%;
   padding: 0;
   display: flex;
-  align-items: center;
   align-items: flex-start;
-  color: #ccd6f6;
+  color: var(--text-color-secondary);
   font-size: 14px;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -72,17 +66,17 @@ body, html {
 }
 
 .personal-info-list li:hover {
-  color: #BD93F9;
+  color: var(--primary-color);
   border-bottom: none;
 }
 
 .personal-info-list li.selected {
-  color: #F8F8F2;
+  color: var(--text-color-primary);
   font-weight: bold;
 }
 
 .education-list-item.selected {
-  color: #F8F8F2;
+  color: var(--text-color-primary);
   font-weight: bold;
 }
 
@@ -109,6 +103,7 @@ body, html {
 }
 
 .education-list-item {
+  height: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 5px; 
@@ -116,7 +111,7 @@ body, html {
 
 .contacts p {
   font-size: 14px;
-  color: #F8F8F2;
+  color: var(--text-color-secondary);
   margin: 5px 0;
   display: flex;
   align-items: center;
@@ -127,12 +122,11 @@ body, html {
 }
 
 .contacts p:hover {
-  color: #FF79C6;
+  color: var(--primary-color);
 }
 
 .code-container {
   width: 50%;
-  color: #abb2bf;
   font-family: 'Courier New', Courier, monospace;
   padding: 10px;
   overflow: auto;
@@ -144,7 +138,7 @@ body, html {
 }
 
 .line-numbers {
-  color: #858585;
+  color: var(--text-color-secondary);
   text-align: right;
   padding: 10px 5px;
   user-select: none;
@@ -163,7 +157,7 @@ pre {
   white-space: pre-wrap; 
   font-size: 14px;
   line-height: 1.6; 
-  color: #8BE9FD;
+  color: var(--primary-color-comment);
 }
 
 .main-content {
@@ -172,11 +166,10 @@ pre {
   display: flex;
   overflow: auto;
   flex-direction: column;
-  border-left: 1px solid #282A36;
+  border-left: 1px solid var(--border-color);
 }
 
 .code-snippet {
-  background-color: #282A36;
   padding: 20px;
   border-radius: 8px;
   margin-top: 20px;

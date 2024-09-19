@@ -1,6 +1,6 @@
 h1, h2 {
     margin: 0;
-    color: #cdd6f4;
+    color: var(--text-color-secondary);
   }
   
   h2 {
@@ -9,26 +9,26 @@ h1, h2 {
   }
   
   p {
-    color: #cdd6f4;
+    color: var(--text-color-secondary);
   }
 
   a {
     text-decoration: none;
-    color: #cdd6f4;
+    color: var(--text-color-secondary);
   }
 
   .function {
-    color: #4440cc;
+    color: var(--primary-color-const);
   }
 
   .comment {
-    color: #b1b1b1;
+    color: var(--primary-color-comment);
   }
 
   .link {
-    color: #5fa054;
+    color: var(--primary-color);
   }
 
   .text {
-    color: #e39f5a;
+    color: var(--primary-color-main-text);
   }
