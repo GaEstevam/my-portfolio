@@ -23,10 +23,10 @@ const App: React.FC = () => {
       <div className="App">
         <div className='content'>
           <Routes>
-            <Route path="/home" element={<Home language={language} />} />
+            <Route path="/my-portfolio" element={<Home language={language} />} />
             <Route path="/about" element={<AboutMe language={language} />} />
             <Route path="/projects" element={<Projects language={language} />} />
-            <Route path="/contact" element={<Contact language={language} />} />
+            {/* <Route path="/contact" element={<Contact language={language} />} /> */}
           </Routes>
         </div>
           <Footer language={language} />

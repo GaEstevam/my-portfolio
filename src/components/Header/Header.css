@@ -8,7 +8,7 @@ header {
     border: 1px solid var(--border-color);
   }
   
-  nav {
+  .header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,7 @@ header {
 
   }
   
-  ul {
+  .header-list {
     height: 100%;
     list-style: none;
     display: flex;
@@ -35,7 +35,17 @@ header {
     border-right: 1px solid var(--border-color); 
   }
 
-  li {
+  .link.active {
+    border-top: 2px solid var(--text-header-color-hover);
+    border-bottom: 1px solid var(--background-color); 
+  }
+
+  .link.active li {
+    font-weight: bold; 
+    color: var(--text-header-color-hover);
+  }
+
+  .item-header-list {
     height: 100%;
     display: flex;
     align-items: center;
@@ -45,10 +55,10 @@ header {
     color: var(--text-color-secondary); 
   }
   
-  li:hover {
+  .item-header-list:hover {
     color: var(--text-header-color-hover); 
     cursor: pointer;
-    border-bottom: 2px solid var(--text-header-color-hover); 
+    border-top: 2px solid var(--text-header-color-hover); 
   }
   
   .language-selector {
@@ -63,8 +73,10 @@ header {
   }
   
   select {
-    background-color: #0d0d0d;
-    color: #959595;
+    border: none;
+    border-radius: 10%;
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
     font-family: 'Fira Code', monospace;
     font-size: 1rem;
   }

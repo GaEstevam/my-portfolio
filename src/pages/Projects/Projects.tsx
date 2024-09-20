@@ -17,13 +17,13 @@ const Projects: React.FC<ProjectsProps> = ({ language }) => {
   };
 
   const techIcons: { [key: string]: React.ReactNode } = {
-    React: <FaReact />,
-    HTML: <FaHtml5 />,
-    CSS: <FaCss3Alt />,
-    Vue: <FaVuejs />,
-    Angular: <FaAngular />,
-    Gatsby: <FaLaptopCode />,
-    Flutter: <FaLaptopCode />,
+    React: <FaReact color='#00cae0'/>,
+    HTML: <FaHtml5 color='#e55226'/>,
+    CSS: <FaCss3Alt color='#0b70b6'/>,
+    Vue: <FaVuejs color='#3fb583'/>,
+    Angular: <FaAngular color='#f02d3b'/>,
+    Gatsby: <FaLaptopCode color='#542c84'/>,
+    Flutter: <FaLaptopCode color='#5fc9f8'/>,
   };
 
   // Filtragem dos projetos com base nas tecnologias selecionadas
@@ -35,6 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ language }) => {
   return (
     <div className="projects-container">
       <div className="sidebar">
+        <h2>{language === 'pt' ? 'Projetos' : 'Projects'}</h2>
         {Object.keys(techIcons).map((tech) => (
           <div key={tech} className="sidebar-item">
             <input

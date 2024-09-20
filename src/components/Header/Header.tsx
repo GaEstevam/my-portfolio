@@ -1,52 +1,56 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 interface HeaderProps {
-  language: 'pt' | 'en'; // Garantir que o tipo de language seja apenas 'pt' ou 'en'
-  changeLanguage: (newLanguage: 'pt' | 'en') => void; // Ajustar a função changeLanguage para aceitar apenas 'pt' ou 'en'
+  language: 'pt' | 'en'; 
+  changeLanguage: (newLanguage: 'pt' | 'en') => void; 
 }
 
 const Header: React.FC<HeaderProps> = ({ language, changeLanguage }) => {
-  // Função auxiliar para lidar com a mudança de idioma
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLanguage = e.target.value as 'pt' | 'en'; // Converter o valor do select para 'pt' ou 'en'
+    const newLanguage = e.target.value as 'pt' | 'en'; 
     changeLanguage(newLanguage);
   };
 
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
+
   return (
     <header>
-      <nav>
+      <nav className='header-nav'>
         <p>gabriel-estevam</p>
-        <ul>
-          <Link to="/home" className='link'>
-            <li>
+        <ul className='header-list'>
+          <Link to="/my-portfolio" className={`link ${isActive('/my-portfolio') ? 'active' : ''}`}>
+            <li className='item-header-list'>
               {language === 'pt' ? '_olá' : '_hello'}
             </li>
           </Link>
-          <Link to="/about" className='link'>
-            <li>
+          <Link to="/about" className={`link ${isActive('/about') ? 'active' : ''}`}>
+            <li className='item-header-list'>
               {language === 'pt' ? '_sobre-mim' : '_about-me'}
             </li>
           </Link>
-          <Link to="/projects" className='link'>
-            <li>
+          <Link to="/projects" className={`link ${isActive('/projects') ? 'active' : ''}`}>
+            <li className='item-header-list'>
               {language === 'pt' ? '_projetos' : '_projects'}
             </li>
           </Link>
-          <Link to="/contact" className='link'>
-            <li>
+          {/* 
+          <Link to="/contact" className={`link ${isActive('/contact') ? 'active' : ''}`}>
+            <li className='item-header-list'>
               {language === 'pt' ? '_contato' : '_contact-me'}
             </li>
           </Link>
+          */}
         </ul>
       </nav>
       <div className="language-selector">
-        <label htmlFor="language">{language === 'pt' ? 'Idioma: ' : 'Language: '}</label>
         <select
           id="language"
           value={language}
-          onChange={handleLanguageChange} // Usar a função auxiliar
+          onChange={handleLanguageChange}
         >
           <option value="pt">Português</option>
           <option value="en">English</option>
